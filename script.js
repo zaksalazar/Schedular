@@ -1,12 +1,9 @@
 $(document).ready(function () {
   //the current day is displayed at the top of the calendar
-  $("#currentDay").text(
-    moment().format("dddd, MMMM Do, YYYY [and the time is] h:mm a")
-  );
 
   //create event listener when saved button is clicked and save to local storage
   $(".saveBtn").on("click", function () {
-    $(this).data('clicked', true).css('background', '#77dd77');
+    $(this).data("clicked", true).css("background", "#77dd77");
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
@@ -15,6 +12,9 @@ $(document).ready(function () {
   });
   // each timeblock is color coded to indicate whether it is in the past, present, or future
   function updateTime() {
+    $("#currentDay").text(
+      moment().format("dddd, MMMM Do, YYYY [and the time is] h:mm:ss a")
+    );
     // get current number of hours
     var currentHour = moment().hours();
 
@@ -34,12 +34,11 @@ $(document).ready(function () {
         $(this).addClass("future");
       }
     });
+    console.log("we are updating time");
   }
 
   updateTime();
-
   // set up interval to check if current time needs to be updated
-  var interval = setInterval(updateTime, 15000);
 
   // display schedule even after refresh, pull from localStorage
   // load any saved data from localStorage
@@ -52,4 +51,6 @@ $(document).ready(function () {
   $("#hour-15 .description").val(localStorage.getItem("hour-15"));
   $("#hour-16 .description").val(localStorage.getItem("hour-16"));
   $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+
+  setInterval(updateTime, 1000);
 });
