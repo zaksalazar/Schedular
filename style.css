@@ -15,7 +15,7 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: lightblue;
+  background-color: #06aed5;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -69,3 +69,48 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+#currentDay {
+  color: white;
+  font-size: 30px;
+  padding-top: 50px;
+}
+.my-legend .legend-title {
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color:#000000
+  }
+.my-legend .legend-scale ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+  font-size: 12px;
+  font-weight: bold;
+  color:black; 
+  }
+.my-legend .legend-scale ul li {
+  display: block;
+  float: left;
+  width: 50px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 80%;
+  list-style: none;
+  }
+.my-legend ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 24px;
+  width: 50px;
+  }
+.my-legend {
+  font-size: 70%;
+  color: #999;
+  clear: both;
+  }
+.my-legend a {
+  color: #777;
+  }
