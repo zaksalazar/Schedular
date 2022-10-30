@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   //create event listener when saved button is clicked and save to local storage
   $(".saveBtn").on("click", function () {
-    $('.saveBtn').css('background', '#77dd77');
+    $(this).data('clicked', true).css('background', '#77dd77');
     var value = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
