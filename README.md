@@ -10,3 +10,4 @@ The text areas will appear red if the hour is in the past, green if the hour is 
 ![screenshot](./assets/images/Screen%20Shot%202022-10-30%20at%208.46.14%20PM.png)
 
 ## Link to Deployed Site 
+https://zaksalazar.github.io/Scheduler/
